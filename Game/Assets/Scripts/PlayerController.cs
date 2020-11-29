@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float zRange = 20;
     public GameObject projectilePrefab;
     // Start is called before the first frame update
+  
     void Start()
     {
         

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
@@ -7,11 +8,12 @@ public class DetectCollisions : MonoBehaviour
     public AudioClip Boom;
     public AudioClip Blip;
     private AudioSource PlayerAudio;
+    public TextMeshProUGUI GameOver;
     public int hp = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class DetectCollisions : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("Game Over");
             this.PlayerAudio.PlayOneShot(this.Boom, 1.0f);
+            GameOver.gameObject.SetActive(true);
         }
         if (this.hp >= 1)
         {
